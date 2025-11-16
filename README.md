@@ -144,12 +144,64 @@ yarn workspace @secret-santa/shared dev
 - `.editorconfig` - Editor configuration
 - `.gitignore` - Git ignore rules
 
+## Git Flow Workflow
+
+This project uses Git Flow for branch management:
+
+- **`main`** - Production-ready code
+- **`develop`** - Integration branch for development
+- **`feature/*`** - Feature branches (branch from `develop`)
+- **`release/*`** - Release preparation (branch from `develop`)
+- **`hotfix/*`** - Production fixes (branch from `main`)
+
+### Quick Start for Contributors
+
+```bash
+# Clone and checkout develop
+git clone <repository-url>
+cd secretSanta
+git checkout develop
+yarn install
+
+# Create a feature branch
+git checkout -b feature/your-feature-name
+
+# After making changes
+git add .
+git commit -m "feat(scope): your changes"
+git push -u origin feature/your-feature-name
+```
+
+See [GITFLOW.md](./GITFLOW.md) for detailed workflow documentation.
+
 ## Contributing
 
-1. Create a feature branch from `main`
-2. Make your changes
-3. Ensure tests pass and code is linted
-4. Submit a pull request
+We welcome contributions! Please follow these steps:
+
+1. Read [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines
+2. Create a feature branch from `develop` (follow Git Flow)
+3. Make your changes following our coding standards
+4. Ensure tests pass (`yarn test`) and code is linted (`yarn lint`)
+5. Commit using conventional commit format
+6. Submit a pull request to `develop` branch
+
+### Branch Naming Convention
+
+- `feature/description` - New features
+- `fix/description` - Bug fixes
+- `docs/description` - Documentation updates
+- `refactor/description` - Code refactoring
+
+### Commit Message Format
+
+```
+<type>(<scope>): <description>
+
+Examples:
+feat(mobile): add user authentication
+fix(web): resolve navigation issue
+docs: update README
+```
 
 ## License
 
