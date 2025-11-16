@@ -1,97 +1,59 @@
 # Dependencies
 node_modules/
-.pnp
-.pnp.js
+vendor/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv
 
-# Testing
-coverage/
-*.lcov
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
-# Production
-build/
+# Build outputs
 dist/
-.next/
-out/
+build/
+*.egg-info/
+.eggs/
+*.o
+*.so
+*.dylib
+*.exe
 
 # Environment variables
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
 
 # Logs
-logs
 *.log
+logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+coverage/
+*.cover
 
 # OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-# React Native
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-*.orig.*
-
-# Metro
-.metro-health-check*
-
-# iOS
-apps/mobile/ios/Pods/
-apps/mobile/ios/build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-ios/.xcode.env.local
-
-# Android
-apps/mobile/android/build/
-apps/mobile/android/app/build/
-apps/mobile/android/.gradle
-apps/mobile/android/local.properties
-*.iml
-.gradle
-local.properties
-.idea/workspace.xml
-.idea/navEditor.xml
-.idea/assetWizardSettings.xml
+.DS_Store
 
 # Temporary files
 *.tmp
 *.temp
 .cache/
-
-# Misc
-.turbo
-.vercel

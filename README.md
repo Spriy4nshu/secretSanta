@@ -1,156 +1,57 @@
 # Secret Santa
 
-A modern Secret Santa gift exchange application with mobile (iOS & Android) and web support.
+A Secret Santa gift exchange application.
 
-## Project Structure
+## Development Workflow
 
-This is a monorepo containing multiple applications and shared packages:
+This project uses **GitFlow** for branch management. Please familiarize yourself with the workflow before contributing.
 
-```
-secret-santa/
-├── apps/
-│   ├── mobile/          # React Native app (iOS & Android)
-│   ├── web/             # Next.js web application
-│   └── backend/         # Express.js API server
-├── packages/
-│   └── shared/          # Shared utilities and types
-└── package.json         # Root workspace configuration
-```
-
-## Tech Stack
-
-### Mobile (iOS & Android)
-- React Native 0.73
-- TypeScript
-- React 18
-
-### Web
-- Next.js 14 (App Router)
-- React 18
-- TypeScript
-- Tailwind CSS
-
-### Backend
-- Node.js
-- Express.js
-- TypeScript
-
-### Shared
-- TypeScript
-- Common types and utilities
-- Business logic
-
-## Prerequisites
-
-- Node.js >= 18.0.0
-- Yarn >= 1.22.0
-- For mobile development:
-  - iOS: Xcode and CocoaPods
-  - Android: Android Studio and SDK
-
-## Getting Started
-
-### Installation
+### Quick Start
 
 1. Clone the repository:
-```bash
-git clone <repository-url>
-cd secretSanta
-```
+   ```bash
+   git clone <repository-url>
+   cd secretSanta
+   ```
 
-2. Install dependencies:
-```bash
-yarn install
-```
+2. Checkout the develop branch:
+   ```bash
+   git checkout develop
+   git pull origin develop
+   ```
 
-### Running the Applications
+3. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-#### Mobile App
-```bash
-# Start Metro bundler
-yarn mobile
+4. Make your changes, commit, and push:
+   ```bash
+   git add .
+   git commit -m "feat: Add your feature description"
+   git push -u origin feature/your-feature-name
+   ```
 
-# In another terminal
-cd apps/mobile
+5. Create a Pull Request to the `develop` branch
 
-# For iOS
-yarn ios
+### Branch Structure
 
-# For Android
-yarn android
-```
+- `main` - Production-ready code
+- `develop` - Main development branch
+- `feature/*` - New features (branch from `develop`)
+- `release/*` - Release preparation (branch from `develop`)
+- `hotfix/*` - Critical fixes (branch from `main`)
 
-#### Web App
-```bash
-yarn web
-```
-Visit [http://localhost:3000](http://localhost:3000)
-
-#### Backend API
-```bash
-yarn backend
-```
-API will be available at [http://localhost:3001](http://localhost:3001)
-
-## Development
-
-### Workspace Commands
-
-Run commands in all workspaces:
-```bash
-yarn build        # Build all packages
-yarn test         # Run all tests
-yarn lint         # Lint all code
-yarn clean        # Clean all build artifacts
-```
-
-### Project-Specific Commands
-
-```bash
-# Mobile
-yarn workspace @secret-santa/mobile start
-yarn workspace @secret-santa/mobile android
-yarn workspace @secret-santa/mobile ios
-
-# Web
-yarn workspace @secret-santa/web dev
-yarn workspace @secret-santa/web build
-
-# Backend
-yarn workspace @secret-santa/backend dev
-yarn workspace @secret-santa/backend build
-
-# Shared
-yarn workspace @secret-santa/shared build
-yarn workspace @secret-santa/shared dev
-```
-
-## Features (Planned)
-
-- User authentication and profiles
-- Create and manage Secret Santa groups
-- Automated random assignment generation
-- Wishlist creation and sharing
-- Email notifications
-- Budget tracking
-- Anonymous messaging
-- Mobile and web access
-
-## Project Configuration
-
-- `.nvmrc` - Node version specification
-- `.prettierrc` - Code formatting rules
-- `.eslintrc.js` - Linting configuration
-- `.editorconfig` - Editor configuration
-- `.gitignore` - Git ignore rules
+For detailed GitFlow instructions, see [GITFLOW.md](./GITFLOW.md)
 
 ## Contributing
 
-1. Create a feature branch from `main`
-2. Make your changes
-3. Ensure tests pass and code is linted
-4. Submit a pull request
+1. Follow the GitFlow workflow
+2. Write meaningful commit messages
+3. Add tests for new features
+4. Update documentation as needed
+5. Create Pull Requests for all changes
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
